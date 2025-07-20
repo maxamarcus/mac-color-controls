@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+mode=$(defaults read -g AppleInterfaceStyle 2>/dev/null)
+# Value is "Dark" if dark mode, else empty.
+
+if [[ $mode == "Dark" ]]; then
+    echo "dark"
+else
+    echo "light"
+fi
+

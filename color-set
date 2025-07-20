@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Switch colors.
+osascript << EOF
+tell application "System Events"
+    tell appearance preferences
+        set dark mode to not dark mode
+    end tell
+end tell
+EOF
+
+# Refresh wallpaper.
+osascript << EOF
+tell application "System Events"
+    tell every desktop
+        set picture to (get picture)
+    end tell
+end tell
+EOF
