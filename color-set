@@ -9,9 +9,3 @@ tell application "System Events"
 end tell
 EOF
 
-# Refresh wallpaper.
-osascript << EOF
-tell application "System Events"
-    set currentWall to picture of current desktop
-    set picture of current desktop to currentWall
-EOF
